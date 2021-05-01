@@ -1,0 +1,936 @@
+{
+	"initialisation": {
+		"conditions": [
+			{
+				"c2id": 666,
+				"id": "readyforsetup666",
+				"scriptName": "readyForSetup",
+				"isTrigger": "true",
+				"highlight": false
+			}
+		],
+		"actions": [
+			{
+				"c2id": 666,
+				"id": "associatetypewithname666",
+				"scriptName": "associateTypeWithName",
+				"highlight": false,
+				"params": [
+					{"id":"object0", "type":"object"},
+					{"id":"name1", "type":"string"}
+				]
+			}
+		],
+		"expressions": [
+		]
+	},
+	"animations": {
+		"conditions": [
+			{
+				"c2id": 0,
+				"id": "onanimfinished0",
+				"scriptName": "OnAnimFinished",
+				"isTrigger": "true",
+				"highlight": false,
+				"params": [
+					{"id":"animation0", "type":"string"}
+				]
+			},
+			{
+				"c2id": 1,
+				"id": "onanyanimfinished1",
+				"scriptName": "OnAnyAnimFinished",
+				"isTrigger": "true",
+				"highlight": false
+			},
+			{
+				"c2id": 2,
+				"id": "comparecurrentkey2",
+				"scriptName": "CompareCurrentKey",
+				"highlight": false,
+				"params": [
+					{"id":"current_key_frame_is0", "type":"cmp"},
+					{"id":"frame1", "type":"number", "initialValue":"0"}
+				]
+			},
+			{
+				"c2id": 3,
+				"id": "comparecurrenttime3",
+				"scriptName": "CompareCurrentTime",
+				"highlight": false,
+				"params": [
+					{"id":"current_animation_time_is0", "type":"cmp"},
+					{"id":"time1", "type":"number", "initialValue":"0"},
+					{"id":"time_format4", "type":"combo", "items":["milliseconds","ratio of the animation length"]}
+				]
+			},
+			{
+				"c2id": 4,
+				"id": "compareanimation4",
+				"scriptName": "CompareAnimation",
+				"highlight": false,
+				"params": [
+					{"id":"animation0", "type":"string"}
+				]
+			},
+			{
+				"id": "comparesecondanimation",
+				"scriptName": "CompareSecondAnimation",
+				"highlight": false,
+				"params": [
+					{"id":"animation0", "type":"string"}
+				]
+			},
+			{
+				"c2id": 5,
+				"id": "animationpaused5",
+				"scriptName": "AnimationPaused",
+				"highlight": false
+			},
+			{
+				"c2id": 6,
+				"id": "animationlooping6",
+				"scriptName": "AnimationLooping",
+				"highlight": false
+			}
+		],
+		"actions": [
+			{
+				"c2id": 0,
+				"id": "setanimation0",
+				"scriptName": "setAnimation",
+				"highlight": false,
+				"params": [
+					{"id":"animation0", "type":"string"},
+					{"id":"where_to_start_playing_this_animation6", "type":"combo", "items":["play from start","play from current time","play from current time ratio","blend to start","blend at current time ratio"]},
+					{"id":"blend_duration7", "type":"number", "initialValue":"0"}
+				]
+			},
+			{
+				"c2id": 1,
+				"id": "setplaybackspeedratio1",
+				"scriptName": "setPlaybackSpeedRatio",
+				"highlight": false,
+				"params": [
+					{"id":"speed_ratio0", "type":"number", "initialValue":"1.0"}
+				]
+			},
+			{
+				"c2id": 3,
+				"id": "setanimationloop3",
+				"scriptName": "setAnimationLoop",
+				"highlight": false,
+				"params": [
+					{"id":"loop_animation?2", "type":"combo", "items":["play once","loop"]}
+				]
+			},
+			{
+				"c2id": 4,
+				"id": "setanimationtime4",
+				"scriptName": "setAnimationTime",
+				"highlight": false,
+				"params": [
+					{"id":"time_units2", "type":"combo", "items":["milliseconds","ratio of total length"]},
+					{"id":"new_position3", "type":"number", "initialValue":"0"}
+				]
+			},
+			{
+				"c2id": 5,
+				"id": "pauseanimation5",
+				"scriptName": "pauseAnimation",
+				"highlight": false
+			},
+			{
+				"c2id": 6,
+				"id": "resumeanimation6",
+				"scriptName": "resumeAnimation",
+				"highlight": false
+			},
+			{
+				"c2id": 7,
+				"id": "playanimto7",
+				"scriptName": "playAnimTo",
+				"highlight": false,
+				"params": [
+					{"id":"3", "type":"combo", "items":["to keyframe","to time","to time ratio"]},
+					{"id":"target4", "type":"number", "initialValue":"0"}
+				]
+			}
+		],
+		"expressions": [
+			{
+				"c2id": 0,
+				"id": "time",
+				"expressionName": "time",
+				"scriptName": "time",
+				"highlight": false,
+				"returnType": "number"
+			},
+			{
+				"c2id": 1,
+				"id": "key",
+				"expressionName": "key",
+				"scriptName": "key",
+				"highlight": false,
+				"returnType": "number"
+			},
+			{
+				"c2id": 3,
+				"id": "playto",
+				"expressionName": "PlayTo",
+				"scriptName": "PlayTo",
+				"highlight": false,
+				"returnType": "number"
+			},
+			{
+				"c2id": 4,
+				"id": "playtotimeleft",
+				"expressionName": "PlayToTimeLeft",
+				"scriptName": "PlayToTimeLeft",
+				"highlight": false,
+				"returnType": "number"
+			},
+			{
+				"c2id": 5,
+				"id": "animationname",
+				"expressionName": "animationName",
+				"scriptName": "animationName",
+				"highlight": false,
+				"returnType": "string"
+			},
+			{
+				"c2id": 7,
+				"id": "timeratio",
+				"expressionName": "timeRatio",
+				"scriptName": "timeRatio",
+				"highlight": false,
+				"returnType": "number"
+			},
+			{
+				"c2id": 22,
+				"id": "animationlength",
+				"expressionName": "animationLength",
+				"scriptName": "animationLength",
+				"highlight": false,
+				"returnType": "number"
+			},
+			{
+				"c2id": 23,
+				"id": "speedratio",
+				"expressionName": "speedRatio",
+				"scriptName": "speedRatio",
+				"highlight": false,
+				"returnType": "number"
+			}
+		]
+	},
+	"size_&_position": {
+		"conditions": [
+			{
+				"c2id": 10,
+				"id": "ismirrored10",
+				"scriptName": "isMirrored",
+				"highlight": false
+			},
+			{
+				"c2id": 11,
+				"id": "isflipped11",
+				"scriptName": "isFlipped",
+				"highlight": false
+			}
+		],
+		"actions": [
+			{
+				"c2id": 2,
+				"id": "setobjectscaleratio2",
+				"scriptName": "setObjectScaleRatio",
+				"highlight": false,
+				"params": [
+					{"id":"scale_ratio0", "type":"number", "initialValue":"1.0"},
+					{"id":"flip_x_axis3", "type":"combo", "items":["don't flip x axis","flip x axis"]},
+					{"id":"flip_y_axis6", "type":"combo", "items":["don't flip y axis","flip y axis"]}
+				]
+			},
+			{
+				"c2id": 11,
+				"id": "setobjectxflip11",
+				"scriptName": "setObjectXFlip",
+				"highlight": false,
+				"params": [
+					{"id":"mirror_x_axis2", "type":"combo", "items":["don't mirror x axis","mirror x axis"]}
+				]
+			},
+			{
+				"c2id": 12,
+				"id": "setobjectyflip12",
+				"scriptName": "setObjectYFlip",
+				"highlight": false,
+				"params": [
+					{"id":"flip_y_axis2", "type":"combo", "items":["don't flip y axis","flip y axis"]}
+				]
+			}
+		],
+		"expressions": [
+			{
+				"c2id": 2,
+				"id": "scaleratio",
+				"expressionName": "ScaleRatio",
+				"scriptName": "ScaleRatio",
+				"highlight": false,
+				"returnType": "number"
+			},
+			{
+				"c2id": 24,
+				"id": "bboxleft",
+				"expressionName": "BBoxLeft",
+				"scriptName": "BBoxLeft",
+				"highlight": false,
+				"returnType": "number"
+			},
+			{
+				"c2id": 25,
+				"id": "bboxright",
+				"expressionName": "BBoxRight",
+				"scriptName": "BBoxRight",
+				"highlight": false,
+				"returnType": "number"
+			},
+			{
+				"c2id": 26,
+				"id": "bboxtop",
+				"expressionName": "BBoxTop",
+				"scriptName": "BBoxTop",
+				"highlight": false,
+				"returnType": "number"
+			},
+			{
+				"c2id": 27,
+				"id": "bboxbottom",
+				"expressionName": "BBoxBottom",
+				"scriptName": "BBoxBottom",
+				"highlight": false,
+				"returnType": "number"
+			}
+		]
+	},
+	"entities": {
+		"conditions": [
+			{
+				"c2id": 16,
+				"id": "compareentity16",
+				"scriptName": "CompareEntity",
+				"highlight": false,
+				"params": [
+					{"id":"entity0", "type":"string"}
+				]
+			}
+		],
+		"actions": [
+			{
+				"c2id": 8,
+				"id": "setent8",
+				"scriptName": "setEnt",
+				"highlight": false,
+				"params": [
+					{"id":"entity0", "type":"string"},
+					{"id":"animation1", "type":"string"}
+				]
+			}
+		],
+		"expressions": [
+			{
+				"c2id": 6,
+				"id": "entityname",
+				"expressionName": "entityName",
+				"scriptName": "entityName",
+				"highlight": false,
+				"returnType": "string"
+			}
+		]
+	},
+	"character_maps": {
+		"conditions": [
+		],
+		"actions": [
+			{
+				"c2id": 9,
+				"id": "removeallcharmaps9",
+				"scriptName": "removeAllCharMaps",
+				"highlight": false
+			},
+			{
+				"c2id": 10,
+				"id": "appendcharmap10",
+				"scriptName": "appendCharMap",
+				"highlight": false,
+				"params": [
+					{"id":"character_map0", "type":"string"}
+				]
+			},
+			{
+				"id": "removeCharMap",
+				"scriptName": "removeCharMap",
+				"highlight": false,
+				"params": [
+					{"id":"character_map", "type":"string"}
+				]
+			}
+		],
+		"expressions": [
+		]
+	},
+	"advanced_:_animation_blending": {
+		"conditions": [
+		],
+		"actions": [
+			{
+				"c2id": 13,
+				"id": "setsecondanim13",
+				"scriptName": "setSecondAnim",
+				"highlight": false,
+				"params": [
+					{"id":"animation0", "type":"string"}
+				]
+			},
+			{
+				"c2id": 14,
+				"id": "setanimblendratio14",
+				"scriptName": "setAnimBlendRatio",
+				"highlight": false,
+				"params": [
+					{"id":"blend_level0", "type":"number", "initialValue":"0"}
+				]
+			},
+			{
+				"c2id": 15,
+				"id": "stopsecondanim15",
+				"scriptName": "stopSecondAnim",
+				"highlight": false
+			}
+		],
+		"expressions": [
+			{
+				"c2id": 15,
+				"id": "blendratio",
+				"expressionName": "blendRatio",
+				"scriptName": "blendRatio",
+				"highlight": false,
+				"returnType": "number"
+			},
+			{
+				"c2id": 16,
+				"id": "secondanimationname",
+				"expressionName": "secondAnimationName",
+				"scriptName": "secondAnimationName",
+				"highlight": false,
+				"returnType": "string"
+			}
+		]
+	},
+	"appearance": {
+		"conditions": [
+		],
+		"actions": [
+			{
+				"c2id": 16,
+				"id": "setvisible16",
+				"scriptName": "setVisible",
+				"isDeprecated": true,
+				"highlight": false,
+				"params": [
+					{"id":"visibility2", "type":"combo", "items":["invisible","visible"]}
+				]
+			},
+			{
+				"c2id": 18,
+				"id": "setopacity18",
+				"scriptName": "setOpacity",
+				"isDeprecated": true,
+				"highlight": false,
+				"params": [
+					{"id":"opacity0", "type":"number", "initialValue":"100"}
+				]
+			}
+		],
+		"expressions": [
+			{
+				"c2id": 18,
+				"id": "getopacity",
+				"expressionName": "GetOpacity",
+				"scriptName": "GetOpacity",
+				"highlight": false,
+				"isDeprecated": true,
+				"returnType": "number"
+			}
+		]
+	},
+	"advanced_:_optimization": {
+		"conditions": [
+			{
+				"c2id": 13,
+				"id": "outsidepaddedviewport13",
+				"scriptName": "outsidePaddedViewport",
+				"highlight": false
+			}
+		],
+		"actions": [
+			{
+				"c2id": 17,
+				"id": "setautomaticpausing17",
+				"scriptName": "setAutomaticPausing",
+				"highlight": false,
+				"params": [
+					{"id":"automatic_pause_settings3", "type":"combo", "items":["no automatic pausing.","pause all playback automatically when scml object position is outside padded display area","pause all playback except sound automatically when scml object position is outside padded display area"]},
+					{"id":"left_padding4", "type":"number", "initialValue":"0"},
+					{"id":"right_padding5", "type":"number", "initialValue":"0"},
+					{"id":"top_padding6", "type":"number", "initialValue":"0"},
+					{"id":"bottom_padding7", "type":"number", "initialValue":"0"}
+				]
+			}
+		],
+		"expressions": [
+		]
+	},
+	"override_animation": {
+		"conditions": [
+		],
+		"actions": [
+			{
+				"c2id": 19,
+				"id": "overrideobjectcomponent19",
+				"scriptName": "overrideObjectComponent",
+				"highlight": false,
+				"params": [
+					{"id":"object_name0", "type":"string"},
+					{"id":"override_component12", "type":"combo", "items":["angle","x","y","scale x","scale y","image frame","pivot x","pivot y","entity index","animation index","time ratio"]},
+					{"id":"value13", "type":"number", "initialValue":"0"}
+				]
+			},
+			{
+				"c2id": 20,
+				"id": "overrideboneswithik20",
+				"scriptName": "overrideBonesWithIk",
+				"highlight": false,
+				"params": [
+					{"id":"parent_bone_name0", "type":"string"},
+					{"id":"child_bone_name1", "type":"string"},
+					{"id":"target_x2", "type":"number", "initialValue":"0"},
+					{"id":"target_y3", "type":"number", "initialValue":"0"},
+					{"id":"additional_child_bone_length4", "type":"number", "initialValue":"0"}
+				]
+			}
+		],
+		"expressions": [
+		]
+	},
+	"attach_c2_object": {
+		"conditions": [
+		],
+		"actions": [
+			{
+				"c2id": 21,
+				"id": "setc2objecttospriterobject21",
+				"scriptName": "setC2ObjectToSpriterObject",
+				"highlight": false,
+				"params": [
+					{"id":"c2_object0", "type":"object"},
+					{"id":"set_which_properties4", "type":"combo", "items":["angle and position","angle","position"]},
+					{"id":"spriter_object5", "type":"string"}
+				]
+			},
+					{
+				"c2id": 27,
+				"id": "pinC2ObjectToSpriterObject27",
+				"scriptName": "pinC2ObjectToSpriterObject",
+				"highlight": false,
+				"params": [
+					{"id":"c2_object0", "type":"object"},
+					{"id":"set_which_properties4", "type":"combo", "items":["angle and position","angle","position"]},
+					{"id":"spriter_object5", "type":"string"}
+				]
+			},
+					{
+				"c2id": 25,
+				"id": "unpinC2ObjectFromSpriterObject25",
+				"scriptName": "unpinC2ObjectFromSpriterObject",
+				"highlight": false,
+				"params": [
+					{"id":"c2_object0", "type":"object"},
+					{"id":"spriter_object5", "type":"string"}
+				]
+			},
+					{
+				"c2id": 26,
+				"id": "unpinAllFromSpriterObject26",
+				"scriptName": "unpinAllFromSpriterObject",
+				"highlight": false,
+				"params": [
+					{"id":"spriter_object5", "type":"string"}
+				]
+			}
+		],
+		"expressions": [
+		]
+	},
+	"misc": {
+		"conditions": [
+			{
+				"id": "onurlloaded",
+				"scriptName": "OnURLLoaded",
+				"isTrigger" : "true",
+				"isDeprecated": true,
+				"highlight" : false
+			},
+			{
+				"id": "onurlfailed",
+				"scriptName": "OnURLFailed",
+				"isTrigger" : "true",
+				"isDeprecated": true,
+				"highlight": false
+			}
+		],
+		"actions": [
+			{
+				"c2id": 22,
+				"id": "setignoreglobaltimescale22",
+				"scriptName": "setIgnoreGlobalTimeScale",
+				"highlight": false,
+				"params": [
+					{"id":"ignore_layout_time_scale?2", "type":"combo", "items":["don't ignore layout time scale","ignore layout time scale"]}
+				]
+			},
+			{
+				"c2id": 24,
+				"id": "stopresumesettinglayer24",
+				"scriptName": "stopResumeSettingLayer",
+				"highlight": false,
+				"params": [
+					{"id":"setspritelayers8", "type":"combo", "items":["Stop","Resume"]}
+				]
+			},
+			{
+				"id": "stopresumesettingvisibilityforobjects",
+				"scriptName": "stopResumeSettingVisibilityForObjects",
+				"highlight": false,
+				"params": [
+					{"id":"setspritevisibility", "type":"combo", "items":["Stop","Resume"]}
+				]
+			},
+			{
+				"id": "stopresumesettingcollisionsforobjects",
+				"scriptName": "stopResumeSettingCollisionsForObjects",
+				"highlight": false,
+				"params": [
+					{"id":"setspritevisibility", "type":"combo", "items":["Stop","Resume"]}
+				]
+			}
+		],
+		"expressions": [
+		]
+	},
+	"objects": {
+		"conditions": [
+			{
+				"c2id": 17,
+				"id": "objectexists17",
+				"scriptName": "objectExists",
+				"highlight": false,
+				"params": [
+					{"id":"name0", "type":"string"}
+				]
+			}
+		],
+		"actions": [
+			{
+				"c2id": 23,
+				"id": "findspriterobject23",
+				"scriptName": "findSpriterObject",
+				"highlight": false,
+				"params": [
+					{"id":"c2_object0", "type":"object"}
+				]
+			}
+		],
+		"expressions": [
+			{
+				"c2id": 19,
+				"id": "objectx",
+				"expressionName": "objectX",
+				"scriptName": "objectX",
+				"highlight": false,
+				"returnType": "number",
+				"params": [
+					{"id":"name0", "type":"string"}
+				]
+			},
+			{
+				"c2id": 20,
+				"id": "objecty",
+				"expressionName": "objectY",
+				"scriptName": "objectY",
+				"highlight": false,
+				"returnType": "number",
+				"params": [
+					{"id":"name0", "type":"string"}
+				]
+			},
+			{
+				"c2id": 21,
+				"id": "objectangle",
+				"expressionName": "objectAngle",
+				"scriptName": "objectAngle",
+				"highlight": false,
+				"returnType": "number",
+				"params": [
+					{"id":"name0", "type":"string"}
+				]
+			},
+			{
+				"c2id": 28,
+				"id": "foundobject",
+				"expressionName": "foundObject",
+				"scriptName": "foundObject",
+				"highlight": false,
+				"returnType": "string"
+			}
+		]
+	},
+	"sounds": {
+		"conditions": [
+			{
+				"c2id": 7,
+				"id": "onsoundtriggered7",
+				"scriptName": "OnSoundTriggered",
+				"isTrigger": "true",
+				"highlight": false
+			},
+			{
+				"c2id": 8,
+				"id": "onsoundvolumechangetriggered8",
+				"scriptName": "OnSoundVolumeChangeTriggered",
+				"isTrigger": "true",
+				"highlight": false
+			},
+			{
+				"c2id": 9,
+				"id": "onsoundpanningchangetriggered9",
+				"scriptName": "OnSoundPanningChangeTriggered",
+				"isTrigger": "true",
+				"highlight": false
+			}
+		],
+		"actions": [
+		],
+		"expressions": [
+			{
+				"c2id": 11,
+				"id": "triggeredsound",
+				"expressionName": "triggeredSound",
+				"scriptName": "triggeredSound",
+				"highlight": false,
+				"returnType": "string"
+			},
+			{
+				"c2id": 12,
+				"id": "triggeredsoundtag",
+				"expressionName": "triggeredSoundTag",
+				"scriptName": "triggeredSoundTag",
+				"highlight": false,
+				"returnType": "string"
+			},
+			{
+				"c2id": 13,
+				"id": "soundvolume",
+				"expressionName": "soundVolume",
+				"scriptName": "soundVolume",
+				"highlight": false,
+				"returnType": "number",
+				"params": [
+					{"id":"name0", "type":"string"}
+				]
+			},
+			{
+				"c2id": 14,
+				"id": "soundpanning",
+				"expressionName": "soundPanning",
+				"scriptName": "soundPanning",
+				"highlight": false,
+				"returnType": "number",
+				"params": [
+					{"id":"name0", "type":"string"}
+				]
+			}
+		]
+	},
+	"action_points": {
+		"conditions": [
+			{
+				"c2id": 12,
+				"id": "actionpointexists12",
+				"scriptName": "actionPointExists",
+				"isDeprecated": true,
+				"highlight": false,
+				"params": [
+					{"id":"name0", "type":"string"}
+				]
+			}
+		],
+		"actions": [
+		],
+		"expressions": [
+			{
+				"c2id": 8,
+				"id": "pointx",
+				"expressionName": "pointX",
+				"scriptName": "pointX",
+				"isDeprecated": true,
+				"highlight": false,
+				"returnType": "any",
+				"params": [
+					{"id":"name0", "type":"string"}
+				]
+			},
+			{
+				"c2id": 9,
+				"id": "pointy",
+				"expressionName": "pointY",
+				"scriptName": "pointY",
+				"isDeprecated": true,
+				"highlight": false,
+				"returnType": "any",
+				"params": [
+					{"id":"name0", "type":"string"}
+				]
+			},
+			{
+				"c2id": 10,
+				"id": "pointangle",
+				"expressionName": "pointAngle",
+				"scriptName": "pointAngle",
+				"isDeprecated": true,
+				"highlight": false,
+				"returnType": "any",
+				"params": [
+					{"id":"name0", "type":"string"}
+				]
+			}
+		]
+	},
+	"events": {
+		"conditions": [
+			{
+				"c2id": 14,
+				"id": "oneventtriggered14",
+				"scriptName": "OnEventTriggered",
+				"isTrigger": "true",
+				"highlight": false,
+				"params": [
+					{"id":"name0", "type":"string"}
+				]
+			}
+		],
+		"actions": [
+		],
+		"expressions": [
+		]
+	},
+	"variables_and_tags": {
+		"conditions": [
+			{
+				"c2id": 15,
+				"id": "tagactive15",
+				"scriptName": "tagActive",
+				"highlight": false,
+				"params": [
+					{"id":"tag_name0", "type":"string"},
+					{"id":"object_name1", "type":"string"}
+				]
+			}
+		],
+		"actions": [
+		],
+		"expressions": [
+		]
+	},
+	"tags_and_variables": {
+		"conditions": [
+		],
+		"actions": [
+		],
+		"expressions": [
+			{
+				"c2id": 17,
+				"id": "val",
+				"expressionName": "val",
+				"scriptName": "val",
+				"highlight": false,
+				"returnType": "any",
+				"isVariadicParameters": true,
+				"params": [
+					{"id":"name0", "type":"string"}
+				]
+			}
+		]
+	},
+	"z_order": {
+		"conditions": [
+			{
+				"id": "CompareZElevation",
+				"scriptName": "CompareZElevation",
+				"highlight": false,
+				"params": [
+					{"id":"which", "type":"combo", "items":["Z Elevation","Total Z Elevation"]},
+					{"id":"comparison", "type":"cmp"},
+					{"id":"z_elevation", "type":"number"}
+					
+				]
+			}
+		],
+		"actions": [
+			{
+				"id": "SetZElevation",
+				"scriptName": "SetZElevation",
+				"highlight": false,
+				"params": [
+					{"id":"z_elevation", "type":"number"}
+				]
+			}
+		],
+		"expressions": [
+			{
+				"id": "ZElevation",
+				"expressionName": "ZElevation",
+				"scriptName": "ZElevation",
+				"highlight": false,
+				"returnType": "number",
+				"isVariadicParameters": false
+			},
+			{
+				"id": "TotalZElevation",
+				"expressionName": "TotalZElevation",
+				"scriptName": "TotalZElevation",
+				"highlight": false,
+				"returnType": "number",
+				"isVariadicParameters": false
+			}
+		]
+	},
+	"web": {
+		"conditions": [
+		],
+		"actions": [
+			{
+				"id": "loadFromURL",
+				"scriptName": "loadFromURL",
+				"highlight": false,
+				"params": [
+					{"id":"url", "type":"string"},
+					{"id":"crossOrigin", "type":"combo", "items":["anonymous","none"]},
+					{"id":"sconText", "type":"string"}
+				]
+			}
+		],
+		"expressions": [
+		]
+	}
+}

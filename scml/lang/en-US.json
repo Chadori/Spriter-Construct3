@@ -1,0 +1,668 @@
+{
+	"languageTag": "en-US",
+	"fileDescription": "Strings for Scml.",
+	"text": {
+		"plugins": {
+			"spriter": {
+				"name": "Scml",
+				"description": "Load and playback SCML files from BrashMonkey's Spriter animation toolkit.",
+				"help-url": "http://<your website or a manual entry on Scirra.com>",
+				"properties": {
+					"scml-file": {
+						"name": "SCML file",
+						"desc": "The source SCML file for your character"
+						},
+					"starting-entity": {
+						"name": "starting entity",
+						"desc": "The character's name within the file"
+						},
+					"starting-animation": {
+						"name": "starting animation",
+						"desc": "The animation to play on start"
+						},
+					"starting-opacity": {
+						"name": "starting opacity",
+						"desc": "The starting opacity, from 0 (transparent) to 100(opaque)"
+						},
+					"draw-self": {
+						"name": "draw self",
+						"desc": "Plugin draws it's own images.",
+						"items": {
+							"false":"false",
+							"true":"true"
+							}
+						},
+					"nickname-in-c2": {
+						"name": "nickname in C3",
+						"desc": "The name displayed within the C3 editor instead of the filename"
+						},
+					"blend-mode": {
+						"name": "blend mode",
+						"desc": "The name displayed within the C3 editor instead of the filename",
+						"items": {
+							"no premultiplied alpha blend":"no premultiplied alpha blend",
+							"use effects blend mode":"use effects blend mode"
+							}
+						}
+				},
+				"aceCategories": {
+					"initialisation": "Initialisation",
+					"animations": "Animations",
+					"size_&_position": "Size & Position",
+					"entities": "Entities",
+					"character_maps": "Character Maps",
+					"advanced_:_animation_blending": "Advanced : Animation Blending",
+					"appearance": "Appearance",
+					"advanced_:_optimization": "Advanced : Optimization",
+					"override_animation": "Override Animation",
+					"attach_c2_object": "Attach C3 Object",
+					"misc": "Misc",
+					"objects": "Objects",
+					"sounds": "Sounds",
+					"action_points": "Action Points",
+					"events": "Events",
+					"variables_and_tags": "Variables and Tags",
+					"tags_and_variables": "Tags and Variables",
+					"z_order" : "Z Order",
+					"web" : "Web"
+				},
+				"conditions": {
+					"onanimfinished0": {
+						"list-name": "On animation finished",
+						"display-text": "On animation {0} finished",
+						"description": "Triggered when the animation has finished.",
+						"params": {
+							"animation0": { "name":"Animation", "desc":"Enter the name of the animation that has finished."}
+						}
+						},
+					"onanyanimfinished1": {
+						"list-name": "On any finished",
+						"display-text": "On any animation finished",
+						"description": "Triggered when any animation has finished."
+						},
+					"comparecurrentkey2": {
+						"list-name": "Compare Current Animation Frame",
+						"display-text": "Current Key Frame is {0} {1}",
+						"description": "Compare the current key frame number.",
+						"params": {
+							"current_key_frame_is0": { "name":"Current Key Frame is", "desc":"Is the current Key Frame <,>,=,etc to the value below"},
+							"frame1": { "name":"Frame", "desc":"The frame number to compare the current key frame to"}
+						}
+						},
+					"comparecurrenttime3": {
+						"list-name": "Compare Current Time",
+						"display-text": "Current Time is {0} {1} {2}",
+						"description": "Compare the current time.",
+						"params": {
+							"current_animation_time_is0": { "name":"Current Animation Time is", "desc":"Is the current time <,>,=,etc to the value below"},
+							"time1": { "name":"Time", "desc":"The time to compare the current key frame to"},
+							"time_format4": { "name":"Time Format", "desc":"Is the 'Time' value above expressed in milliseconds or as a ratio", "items":{"milliseconds":"milliseconds","ratio of the animation length":"ratio of the animation length"}}
+						}
+						},
+					"compareanimation4": {
+						"list-name": "Compare Current Animation",
+						"display-text": "Is current animation {0}",
+						"description": "Compare the name of the current animation.",
+						"params": {
+							"animation0": { "name":"Animation", "desc":"Is this the current animation."}
+						}
+						},
+					"comparesecondanimation": {
+						"list-name": "Compare Second Animation",
+						"display-text": "Is second animation {0}",
+						"description": "Compare the name of the second animation.",
+						"params": {
+							"animation0": { "name":"Animation", "desc":"Is this the current second animation."}
+						}
+						},
+					"onurlloaded": {
+						"list-name": "On URL Loaded",
+						"display-text": "On URL Loaded",
+						"description": "Triggered after 'Load from Url' when the project has finished loading."
+						},
+					"onurlfailed": {
+						"list-name": "On URL Failed",
+						"display-text": "On URL Failed",
+						"description": "Triggered after 'Load from Url' the project fails to load."
+						},
+					"animationpaused5": {
+						"list-name": "Is Paused",
+						"display-text": "If animation is paused",
+						"description": "Is animation paused?"
+						},
+					"animationlooping6": {
+						"list-name": "Is Looping",
+						"display-text": "If animation is looping",
+						"description": "Is animation set to loop?"
+						},
+					"onsoundtriggered7": {
+						"list-name": "On sound triggered",
+						"display-text": "On sound triggered",
+						"description": "Triggered when a sound should begin playback."
+						},
+					"onsoundvolumechangetriggered8": {
+						"list-name": "On sound volume change triggered",
+						"display-text": "On sound volume change triggered",
+						"description": "Triggered when a sound's volume should change."
+						},
+					"onsoundpanningchangetriggered9": {
+						"list-name": "On sound panning change triggered",
+						"display-text": "On sound panning change triggered",
+						"description": "Triggered when a sound's volume should change."
+						},
+					"ismirrored10": {
+						"list-name": "Is Mirrored (on x axis)",
+						"display-text": "Mirrored on x axis",
+						"description": "True when the object is mirrored on the x axis"
+						},
+					"isflipped11": {
+						"list-name": "Is Flipped (on y axis)",
+						"display-text": "Flipped on y axis",
+						"description": "True when the object is mirrored on the y axis"
+						},
+					"readyforsetup666": {
+						"list-name": "On initialised",
+						"display-text": "On initialised",
+						"description": "Triggered when .SCML file has loaded and is ready to be associated with objects."
+						},
+					"actionpointexists12": {
+						"list-name": "Action Point exists on frame",
+						"display-text": "Action Point {0} exists on current frame",
+						"description": "True when the action point exists on the current frame",
+						"params": {
+							"name0": { "name":"name", "desc":"The name of the point."}
+						}
+						},
+					"outsidepaddedviewport13": {
+						"list-name": "Position is outside padded viewport",
+						"display-text": "Position is outside padded viewport",
+						"description": "True when this object's x,y coordinate is outside the padded display box set through Set Automatic Pausing action."
+						},
+					"oneventtriggered14": {
+						"list-name": "On event triggered",
+						"display-text": "On event {0} triggered",
+						"description": "Triggered upon Spriter events in animation.",
+						"params": {
+							"name0": { "name":"name", "desc":"The name of the event."}
+						}
+						},
+					"tagactive15": {
+						"list-name": "Tag is active in frame",
+						"display-text": "Tag {0} is active on current frame({1})",
+						"description": "True when the tag is active",
+						"params": {
+							"tag_name0": { "name":"tag name", "desc":"The name of the tag."},
+							"object_name1": { "name":"object name", "desc":"The name of the sprite, bone, sound, etc to check for a tag.  Leave blank for universal tags (the object's name in Spriter, not the name of the C3 object)"}
+						}
+						},
+					"compareentity16": {
+						"list-name": "Compare Current Entity",
+						"display-text": "Is current entity {0}",
+						"description": "Compare the name of the current entity.",
+						"params": {
+							"entity0": { "name":"Entity", "desc":"Is this the current entity."}
+						}
+						},
+					"objectexists17": {
+						"list-name": "Object exists on frame",
+						"display-text": "Object {0} exists on current frame",
+						"description": "True when the action object exists on the current frame",
+						"params": {
+							"name0": { "name":"name", "desc":"The name of the object."}
+						}
+						},
+					"CompareZElevation": {
+						"list-name": "Compare Z Elevation",
+						"display-text": "{0} {1} {2}",
+						"description": "Compare the Z elevation to a value.",
+						"params": {
+							"which": { "name":"Which", "desc":"Compare either the Z elevation (relative to its own layer), or the total Z elevation (taking into account the layer Z elevation)", "items":{"Z Elevation":"Z Elevation","Total Z Elevation":"Total Z Elevation"}},
+							"comparison": { "name":"Comparison", "desc":"How to compare the Z elevation"},
+							"z_elevation": { "name":"Z elevation", "desc":"The Z elevation to compare to."}
+						}
+						}
+				},
+				"actions": {
+					"associatetypewithname666": {
+						"list-name": "Associate object type",
+						"display-text": "Associate {0} with name {1}",
+						"description": "Associate an object with its Spriter name.",
+						"params": {
+							"object0": { "name":"Object", "desc":"Choose the object type you wish to associate."},
+							"name1": { "name":"Name", "desc":"The name Spriter uses for this object."}
+						}
+					},
+					"loadFromURL": {
+						"list-name": "Load from URL",
+						"display-text": "Load project from {0} ({1}){2}",
+						"description": "Load project from a web address or data URI.",
+						"params": {
+							"url": { "name":"URI", "desc":"Enter the URL on the web, or data URI, of an image to load."},
+							"crossOrigin": { "name":"Cross-origin", "desc":"The cross-origin (CORS) mode to use for the request.", "items":{"anonymous":"anonymous","none":"none"}},
+							"sconText": { "name":"scon text", "desc":"Enter the text of the scon to load (usually retrieved with AJAX.LastData)."}
+						}
+					},
+					"setanimation0": {
+						"list-name": "Set animation",
+						"display-text": "Set animation to {0} and {1} with a {2}ms blend",
+						"description": "Set the current animation",
+						"params": {
+							"animation0": { "name":"Animation", "desc":"The name of the animation to set."},
+							"where_to_start_playing_this_animation6": { "name":"Where to start playing this animation", "desc":"Play this animation from the beginning? or play from current time or time ratio", "items":{"play from start":"play from start","play from current time":"play from current time","play from current time ratio":"play from current time ratio","blend to start":"blend to start","blend at current time ratio":"blend at current time ratio"}},
+							"blend_duration7": { "name":"Blend Duration", "desc":"If a blend option is chosen above, the length of time (in milliseconds) to take to blend to the new animation"}
+						}
+					},
+					"setplaybackspeedratio1": {
+						"list-name": "Set playback speed ratio",
+						"display-text": "Set playback speed ratio to {0}",
+						"description": "Set the ratio of playback speed",
+						"params": {
+							"speed_ratio0": { "name":"Speed Ratio", "desc":"The new ratio of playback speed (1.0 is full speed. 0.5 is half speed, 2.0 is double speed)"}
+						}
+					},
+					"setobjectscaleratio2": {
+						"list-name": "Set object scale ratio",
+						"display-text": "Set object scale to {0} - {1} - {2}",
+						"description": "Set the ratio of object scale",
+						"params": {
+							"scale_ratio0": { "name":"Scale Ratio", "desc":"The new ratio of the object scale (1.0 is full size. 0.5 is half size, 2.0 is double size)"},
+							"flip_x_axis3": { "name":"Flip X Axis", "desc":"Flip on the X Axis and display with negative width", "items":{"don't flip x axis":"don't flip x axis","flip x axis":"flip x axis"}},
+							"flip_y_axis6": { "name":"Flip Y Axis", "desc":"Flip on the Y Axis and display with negative height", "items":{"don't flip y axis":"don't flip y axis","flip y axis":"flip y axis"}}
+						}
+					},
+					"setanimationloop3": {
+						"list-name": "Set animation looping",
+						"display-text": "Set current animation to {0}",
+						"description": "Set whether or not an animation loops",
+						"params": {
+							"loop_animation?2": { "name":"Loop animation?", "desc":"Loop animation, or play only once? (overrides animation settings from file)", "items":{"play once":"play once","loop":"loop"}}
+						}
+					},
+					"setanimationtime4": {
+						"list-name": "Set current time in animation",
+						"display-text": "Set current time in animation to {1} {0}",
+						"description": "Set current time in animation",
+						"params": {
+							"time_units2": { "name":"time units", "desc":"New position in current animation to be specified in milliseconds, or as a ration of the total length of the animation between 0.0 and 1.0?", "items":{"milliseconds":"milliseconds","ratio of total length":"ratio of total length"}},
+							"new_position3": { "name":"New Position", "desc":"The new position in milliseconds or as a ratio from 0.0 to 1.0"}
+						}
+					},
+					"pauseanimation5": {
+						"list-name": "Pause animation",
+						"display-text": "Pause animation playback",
+						"description": "Pause animation playback"
+					},
+					"resumeanimation6": {
+						"list-name": "Resume animation",
+						"display-text": "Resume animation playback",
+						"description": "Resume animation playback"
+					},
+					"playanimto7": {
+						"list-name": "Play current animation to...",
+						"display-text": "Play current animation {0}: {1}",
+						"description": "Play animation from current time to...",
+						"params": {
+							"3": { "name":"", "desc":"What type of value are specifying below to play the animation to", "items":{"to keyframe":"to keyframe","to time":"to time","to time ratio":"to time ratio"}},
+							"target4": { "name":"Target", "desc":"The target time to play the current animation to (units specified above)"}
+						}
+					},
+					"setent8": {
+						"list-name": "Set entity",
+						"display-text": "Set entity to {0} : {1}",
+						"description": "Set the current entity",
+						"params": {
+							"entity0": { "name":"Entity", "desc":"The name of the entity to set."},
+							"animation1": { "name":"Animation", "desc":"The name of the animation to set. Leave blank to attempt to switch to animation of same name."}
+						}
+					},
+					"removeallcharmaps9": {
+						"list-name": "Remove all character maps",
+						"display-text": "Remove all character maps",
+						"description": "Remove all character maps from the character"
+					},
+					"removeCharMap": {
+						"list-name": "Remove character map",
+						"display-text": "Remove character map {0}",
+						"description": "Remove character map from the character",
+						"params": {
+							"character_map": { "name":"Character Map", "desc":"The character map to remove from this character."}
+						}
+					},
+					"appendcharmap10": {
+						"list-name": "Append character map",
+						"display-text": "Append character map {0}",
+						"description": "Append character map to this character",
+						"params": {
+							"character_map0": { "name":"Character Map", "desc":"The character map to append to this character."}
+						}
+					},
+					"setobjectxflip11": {
+						"list-name": "Set mirrored (on x axis)",
+						"display-text": "{0}",
+						"description": "Set whether the object is mirrored on the x axis",
+						"params": {
+							"mirror_x_axis2": { "name":"Mirror X Axis", "desc":"Flip on the X Axis and display with negative width", "items":{"don't mirror x axis":"don't mirror x axis","mirror x axis":"mirror x axis"}}
+						}
+					},
+					"setobjectyflip12": {
+						"list-name": "Set flipped (on y axis)",
+						"display-text": "{0}",
+						"description": "Set whether the object is flipped on the y axis",
+						"params": {
+							"flip_y_axis2": { "name":"Flip Y Axis", "desc":"Flip on the Y Axis and display with negative width", "items":{"don't flip y axis":"don't flip y axis","flip y axis":"flip y axis"}}
+						}
+					},
+					"setsecondanim13": {
+						"list-name": "Set second (blended) animation",
+						"display-text": "Set second(blended) animation to {0}",
+						"description": "Set the current second(blended) animation",
+						"params": {
+							"animation0": { "name":"Animation", "desc":"The name of the second animation to set."}
+						}
+					},
+					"setanimblendratio14": {
+						"list-name": "Set animation blend ratio",
+						"display-text": "Set animation blend ratio to {0}",
+						"description": "Set the blend ratio of the current animations",
+						"params": {
+							"blend_level0": { "name":"Blend level", "desc":"The new new ratio from 0.0 to 1.0 of the blend between the current and blended animations"}
+						}
+					},
+					"stopsecondanim15": {
+						"list-name": "Stop blending second (blended) animation",
+						"display-text": "Stop blending second(blended) animation",
+						"description": "Stops blending the second(blended) animation, and resumes normal playback of the current animation"
+					},
+					"setvisible16": {
+						"list-name": "Set Visible",
+						"display-text": "Set {0}",
+						"description": "Choose whether the object is hidden or shown",
+						"params": {
+							"visibility2": { "name":"Visibility", "desc":"Choose whether the object is hidden or shown", "items":{"invisible":"Invisible","visible":"Visible"}}
+						}
+					},
+					"setautomaticpausing17": {
+						"list-name": "Set Automatic Pausing",
+						"display-text": "Set to {0}. Padding Left:{1} Right:{2} Top:{3} Bottom{4}",
+						"description": "Set when to automatically pause an animation for efficiency",
+						"params": {
+							"automatic_pause_settings3": { "name":"Automatic Pause Settings", "desc":"Set the new automatic pausing settings", "items":{"no automatic pausing.":"No automatic pausing.","pause all playback automatically when scml object position is outside padded display area":"Pause all playback automatically when scml object position is outside padded display area","pause all playback except sound automatically when scml object position is outside padded display area":"Pause all playback except sound automatically when scml object position is outside padded display area"}},
+							"left_padding4": { "name":"Left Padding", "desc":"The object must be outside the visible area of the screen plus this padding to automatically pause"},
+							"right_padding5": { "name":"Right Padding", "desc":"The object must be outside the visible area of the screen plus this padding to automatically pause"},
+							"top_padding6": { "name":"Top Padding", "desc":"The object must be outside the visible area of the screen plus this padding to automatically pause"},
+							"bottom_padding7": { "name":"Bottom Padding", "desc":"The object must be outside the visible area of the screen plus this padding to automatically pause"}
+						}
+					},
+					"setopacity18": {
+						"list-name": "Set Opacity",
+						"display-text": "Set Opacity to {0}",
+						"description": "Set how transparent the object appears.",
+						"params": {
+							"opacity0": { "name":"Opacity", "desc":"Choose the object opacity, from 0 (transparent) to 100(opaque)"}
+						}
+					},
+					"overrideobjectcomponent19": {
+						"list-name": "Override Object Animation",
+						"display-text": "Override object {0}'s {1} with {2}",
+						"description": "Override an object's animation data.",
+						"params": {
+							"object_name0": { "name":"Object Name", "desc":"The name of the sprite, bone, sound, etc to override animation for (the object's name in Spriter, not the name of the C3 object)"},
+							"override_component12": { "name":"Override Component", "desc":"The component value you want to override", "items":{"angle":"angle","x":"x","y":"y","scale x":"scale x","scale y":"scale y","image frame":"image frame","pivot x":"pivot x","pivot y":"pivot y","entity index":"entity index","animation index":"animation index","time ratio":"time ratio"}},
+							"value13": { "name":"Value", "desc":"New component value"}
+						}
+					},
+					"overrideboneswithik20": {
+						"list-name": "Override Bones With IK",
+						"display-text": "Override bones {0} and {1} with IK to ({2},{3}) with child bone extended by {4}",
+						"description": "Use IK to override bones' animation data.",
+						"params": {
+							"parent_bone_name0": { "name":"Parent Bone Name", "desc":"The name of the parent bone you want to use IK on"},
+							"child_bone_name1": { "name":"Child Bone Name", "desc":"The name of the child bone you want to use IK on"},
+							"target_x2": { "name":"Target X", "desc":"X location you want the IK joint to reach for"},
+							"target_y3": { "name":"Target Y", "desc":"Y location you want the IK joint to reach for"},
+							"additional_child_bone_length4": { "name":"Additional child bone length", "desc":"Additional child bone length"}
+						}
+					},
+					"setc2objecttospriterobject21": {
+						"list-name": "Set C3 Object to Spriter Object",
+						"display-text": "Set {0}'s {1} to {2}",
+						"description": "Set C3 Object's angle and/or position to Spriter Object.",
+						"params": {
+							"c2_object0": { "name":"C3 Object", "desc":"Choose the C3 Object you want to set to a Spriter Object"},
+							"set_which_properties4": { "name":"Set which properties", "desc":"The properties you want to set to the Spriter Object", "items":{"angle and position":"angle and position","angle":"angle","position":"position"}},
+							"spriter_object5": { "name":"Spriter Object", "desc":"The Spriter Object you want to set it to"}
+						}
+					},
+					"setignoreglobaltimescale22": {
+						"list-name": "Set ignore layout time scale",
+						"display-text": "Set {0}",
+						"description": "Set whether or not to ignore the global time scale of the current layout.",
+						"params": {
+							"ignore_layout_time_scale?2": { "name":"Ignore layout time scale?", "desc":"Set whether or not to ignore the global time scale of the current layout", "items":{"don't ignore layout time scale":"don't ignore layout time scale","ignore layout time scale":"ignore layout time scale"}}
+						}
+					},
+					"findspriterobject23": {
+						"list-name": "Find Spriter Object from C3 Object",
+						"display-text": "Find Spriter Object for {0}",
+						"description": "Find Spriter Object that corresponds with the C3 Object (retrieve with expression 'foundObject'.",
+						"params": {
+							"c2_object0": { "name":"C3 Object", "desc":"Choose the C3 Object you want to find the corresponding Spriter Object of"}
+						}
+					},
+					"stopresumesettinglayer24": {
+						"list-name": "Stop/Resume Setting Sprite Layer",
+						"display-text": "{0} setting sprite layers",
+						"description": "Stop or resume setting layer to allow you to override them",
+						"params": {
+							"setspritelayers8": { "name":"Set Sprite Layers", "desc":"Choose whether to stop or resume setting layers for individual sprites", "items":{"Stop":"Stop","Resume":"Resume"}}
+						}
+					},
+					"stopresumesettingvisibilityforobjects": {
+						"list-name": "Stop/Resume Setting Sprite and Box Visibility",
+						"display-text": "{0} setting sprite/box visibility",
+						"description": "Stop or resume setting visibility to allow you to override them",
+						"params": {
+							"setspritevisibility": { "name":"Set Sprite/Box Visibility", "desc":"Choose whether to stop or resume setting visibility for individual sprites", "items":{"Stop":"Stop","Resume":"Resume"}}
+						}
+					},	
+					"stopresumesettingcollisionsforobjects": {
+						"list-name": "Stop/Resume Setting Sprite and Box Collisions",
+						"display-text": "{0} setting sprite/box collisions",
+						"description": "Stop or resume setting collisions to allow you to override them",
+						"params": {
+							"setspritevisibility": { "name":"Set Sprite/Box Collisions", "desc":"Choose whether to stop or resume setting collisions for individual sprites", "items":{"Stop":"Stop","Resume":"Resume"}}
+						}
+					},
+					"pinC2ObjectToSpriterObject27": {
+						"list-name": "Pin C3 Object to Spriter Object",
+						"display-text": "Pin {0}'s {1} to {2}",
+						"description": "Pin C3 Object's angle and/or position to Spriter Object.",
+						"params": {
+							"c2_object0": { "name":"C3 Object", "desc":"Choose the C3 Object you want to pin to a Spriter Object"},
+							"set_which_properties4": { "name":"Set which properties", "desc":"The properties you want to set to the Spriter Object", "items":{"angle and position":"angle and position","angle":"angle","position":"position"}},
+							"spriter_object5": { "name":"Spriter Object", "desc":"The Spriter Object you want to pin it to"}
+						}
+					},
+					"unpinC2ObjectFromSpriterObject25": {
+						"list-name": "Unpin C3 Object to Spriter Object",
+						"display-text": "Unpin {0} from {1}",
+						"description": "Unpin C3 Object's angle and/or position from Spriter Object.",
+						"params": {
+							"c2_object0": { "name":"C3 Object", "desc":"Choose the C3 Object you want to unpin a Spriter Object"},
+							"spriter_object5": { "name":"Spriter Object", "desc":"The Spriter Object you want to unpin from. Leave empty string for all objects"}
+						}
+					},
+					"unpinAllFromSpriterObject26": {
+						"list-name": "Unpin all from Spriter Object",
+						"display-text": "Unpin all from {0}",
+						"description": "Unpin all C3 Objects from Spriter Object.",
+						"params": {
+							"spriter_object5": { "name":"Spriter Object", "desc":"The Spriter Object you unpin all objects from. Leave empty string for all objects"}
+						}
+					},	
+					"SetZElevation": {
+						"list-name": "Set Z elevation",
+						"display-text": "Set Z elevation to {0}",
+						"description": "Sets the object's Z elevation.",
+						"params": {
+							"z_elevation": { "name":"Z elevation", "desc":"New Z elevation. The camera starts at Z 100 looking down to Z 0."}
+						}
+					}
+				},
+				"expressions": {
+					"time": {
+						"description": "Returns the current time in the animation between 0 and animation length.",
+						"translated-name": "time"
+						},
+					"key": {
+						"description": "Returns the index of the current keyframe in the animation between 0 and the number of keys.",
+						"translated-name": "key"
+						},
+					"scaleratio": {
+						"description": "Returns the scale ratio of the object",
+						"translated-name": "ScaleRatio"
+						},
+					"playto": {
+						"description": "Returns the target time in the animation between 0 and animation length for the current 'Play animation to...' action, or -1 if there is no current 'Play animation to...' action",
+						"translated-name": "PlayTo"
+						},
+					"playtotimeleft": {
+						"description": "Returns the remaining number of milliseconds(at normal playback speed) left to complete the current 'Play animation to...' action",
+						"translated-name": "PlayToTimeLeft"
+						},
+					"animationname": {
+						"description": "Returns the name of the current animation",
+						"translated-name": "animationName"
+						},
+					"entityname": {
+						"description": "Returns the name of the current entity",
+						"translated-name": "entityName"
+						},
+					"timeratio": {
+						"description": "Returns the current time as a ratio of the entire animation length between 0.0 and 1.0",
+						"translated-name": "timeRatio"
+						},
+					"pointx": {
+						"description": "returns the current x position of an action point",
+						"translated-name": "pointX",
+						"params": {
+							"name0": { "name":"name", "desc":"The name of the point."}
+						}
+						},
+					"pointy": {
+						"description": "returns the current y position of an action point",
+						"translated-name": "pointY",
+						"params": {
+							"name0": { "name":"name", "desc":"The name of the point."}
+						}
+						},
+					"pointangle": {
+						"description": "returns the current angle of an action point",
+						"translated-name": "pointAngle",
+						"params": {
+							"name0": { "name":"name", "desc":"The name of the point."}
+						}
+						},
+					"triggeredsound": {
+						"description": "returns the name of the last triggered sound",
+						"translated-name": "triggeredSound"
+						},
+					"triggeredsoundtag": {
+						"description": "returns the name of the last triggered sound's tag",
+						"translated-name": "triggeredSoundTag"
+						},
+					"soundvolume": {
+						"description": "returns the volume of the sound",
+						"translated-name": "soundVolume",
+						"params": {
+							"name0": { "name":"name", "desc":"The name of the sound."}
+						}
+						},
+					"soundpanning": {
+						"description": "returns the panning of the sound",
+						"translated-name": "soundPanning",
+						"params": {
+							"name0": { "name":"name", "desc":"The name of the sound."}
+						}
+						},
+					"blendratio": {
+						"description": "returns the current blend ratio of animations 0(current animation) to 1(next animation)",
+						"translated-name": "blendRatio"
+						},
+					"secondanimationname": {
+						"description": "returns the name of the second(blended) animation",
+						"translated-name": "secondAnimationName"
+						},
+					"val": {
+						"description": "returns the currentValue of the Spriter variable (variable name, object name) (the object's name in Spriter, not the name of the C3 object)",
+						"translated-name": "val",
+						"params": {
+							"name0": { "name":"name", "desc":"The name of the variable."}
+						}
+						},
+					"getopacity": {
+						"description": "Get the object's current opacity, from 0 (transparent) to 100 (opaque).",
+						"translated-name": "GetOpacity"
+						},
+					"objectx": {
+						"description": "returns the current x position of an object",
+						"translated-name": "objectX",
+						"params": {
+							"name0": { "name":"name", "desc":"The name of the object."}
+						}
+						},
+					"objecty": {
+						"description": "returns the current y position of an object",
+						"translated-name": "objectY",
+						"params": {
+							"name0": { "name":"name", "desc":"The name of the object."}
+						}
+						},
+					"objectangle": {
+						"description": "returns the current angle of an object",
+						"translated-name": "objectAngle",
+						"params": {
+							"name0": { "name":"name", "desc":"The name of the object."}
+						}
+						},
+					"animationlength": {
+						"description": "Returns the of the current animation in milliseconds (at normal playback speed)",
+						"translated-name": "animationLength"
+						},
+					"speedratio": {
+						"description": "Returns the current playback speed ratio (1.0 is full speed. 0.5 is half speed, 2.0 is double speed)",
+						"translated-name": "speedRatio"
+						},
+					"bboxleft": {
+						"description": "Get the left edge of the object's bounding box, in pixels.",
+						"translated-name": "BBoxLeft"
+						},
+					"bboxright": {
+						"description": "Get the right edge of the object's bounding box, in pixels.",
+						"translated-name": "BBoxRight"
+						},
+					"bboxtop": {
+						"description": "Get the top edge of the object's bounding box, in pixels.",
+						"translated-name": "BBoxTop"
+						},
+					"bboxbottom": {
+						"description": "Get the bottom edge of the object's bounding box, in pixels.",
+						"translated-name": "BBoxBottom"
+						},
+					"foundobject": {
+						"description": "returns the name of the last found object (Find Spriter Object action)",
+						"translated-name": "foundObject"
+						},
+					"ZElevation": {
+						"description": "Get the Z elevation relative to its layer",
+						"translated-name": "ZElevation"
+						},
+					"TotalZElevation": {
+						"description": "Get the total Z elevation taking into account the layer Z elevation",
+						"translated-name": "TotalZElevation"
+						}
+				}
+			}
+		}
+	}
+}
