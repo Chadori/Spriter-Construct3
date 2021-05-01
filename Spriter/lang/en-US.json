@@ -4,7 +4,7 @@
 	"text": {
 		"plugins": {
 			"spriter": {
-				"name": "Scml",
+				"name": "Spriter",
 				"description": "Load and playback SCML files from BrashMonkey's Spriter animation toolkit.",
 				"help-url": "http://<your website or a manual entry on Scirra.com>",
 				"properties": {

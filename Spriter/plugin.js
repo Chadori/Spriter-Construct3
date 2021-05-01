@@ -5,7 +5,7 @@
     const lang = self.lang;    
 
 	const PLUGIN_ID = "Spriter";
-	const PLUGIN_VERSION = "3-3-2021b";
+	const PLUGIN_VERSION = "01-05-2021";
 	const PLUGIN_CATEGORY = "general";
 
 	let app = null;
@@ -664,6 +664,7 @@
 			this._info.AddCommonAngleACEs();
 			this._info.AddCommonAppearanceACEs();
 			this._info.AddCommonZOrderACEs();
+			this._info.AddCommonSceneGraphACEs();
 			SDK.Lang.PushContext(".properties");
 			this._info.SetProperties([
 				new SDK.PluginProperty("text", "scml-file", ""),

@@ -1,9 +1,9 @@
 {
 	"is-c3-addon": true,
 	"type": "plugin",
-	"name": "Scml",
+	"name": "Spriter",
 	"id": "Spriter",
-	"version": "3-3-2021b",
+	"version": "01-05-2021",
 	"author": "BrashMonkey",
 	"website": "https://brashmonkey.com/forum/index.php?/topic/12434-spriter-plug-in-for-construct-3/",
 	"documentation": "https://brashmonkey.com/forum/index.php?/topic/12434-spriter-plug-in-for-construct-3/",
